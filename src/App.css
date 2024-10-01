@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(../img/fondo-body.jpg);
+    background-image: linear-gradient(rgba(24, 23, 23, 0.472), rgba(255, 255, 255, 0.324)), url(../img/fondo-body.jpg);
+    background-size: cover;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: rgba(244, 200, 133, 0.546);
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 10% 1fr 1fr 10%;
+    align-items: center;
+    text-align: center;
+}
+
+#logo {
+    width: 100%;
+    justify-self: start;
+}
+
+#marca {
+    color: rgb(185, 17, 121);
+    font-size: 400%;
+    font-family: 'Berkshire Swash', serif;
+
+}
+
+.boton-navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-self: center;
+}
+
+button {
+    background-color: rgb(135, 22, 33);
+    color: #2a2229;
+    font-family: "Besley", serif;
+    appearance: none;
+    border-radius: 10%;
+    border-color: rgb(185, 17, 121);
+    border-style: solid;
+    background-color: rgb(185, 17, 121);
+    cursor: pointer;
+}
+
+.suma-carrito {
+    display: flex;
+    width: 40px;
+    font-size: 10px;
+}
+
+.suma-carrito img {
+    width: 100%;
+}
+
+#ItemListConteiner{
+    text-align: center;
+    font-size: 50px;
+}

@@ -9,8 +9,7 @@ function App() {
     <NavBar marca="Maradiana"
     logo="../img/logo-md.png"
     />
-<ItemListConteiner
-label="aca van los productos"
+<ItemListConteiner 
 />
     </>
   )

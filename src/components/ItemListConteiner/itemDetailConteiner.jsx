@@ -13,6 +13,7 @@ function ItemDetailConteiner() {
     }, [id])
     return (
         <ItemDetail detail={detail} />
+
     )
 }
 export default ItemDetailConteiner

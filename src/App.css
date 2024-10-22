@@ -87,6 +87,9 @@ h3 {
 h4 {
     font-size: 15px;
 }
+p{
+    font-size: 15px;
+}
 
 .itemList {
     margin-top: 30px;
@@ -106,4 +109,11 @@ h4 {
     text-align: center;
     font-family: 'Besley', serif;
     font-size: 10px;
+}
+button {margin: 2px;
+    background-color: rgb(135, 22, 33);
+    font-family: var(--bs-body-font-family);
+    color: rgb(255, 255, 255);
+    border: rgb(135, 22, 33) solid;
+    border-radius: 5%;
 }

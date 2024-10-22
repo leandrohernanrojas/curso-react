@@ -7,7 +7,7 @@ function ItemDetail({ detail }) {
             <p>{detail?.description}</p>
             <p>stock:{detail?.stock}</p>
             <p>${detail?.price}</p>
-            <ItemCount/>
+            <ItemCount />
         </div>
 
     )

@@ -4,15 +4,15 @@ import ItemDetail from "./itemDetail"
 
 function ItemDetailConteiner() {
     const [detail, setDetail] = useState()
-    const {id} = useParams()
+    const { id } = useParams()
     useEffect(() => {
 
         fetch(`https://dummyjson.com/products/${id}`)
             .then(res => res.json())
-            .then(res =>setDetail(res))
+            .then(res => setDetail(res))
     }, [id])
     return (
-    <ItemDetail detail={detail}/>
+        <ItemDetail detail={detail} />
     )
 }
 export default ItemDetailConteiner

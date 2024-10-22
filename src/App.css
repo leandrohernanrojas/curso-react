@@ -33,8 +33,8 @@ header {
 
 #marca {
     color: rgb(185, 17, 121);
-    font-size: 400%;
     font-family: 'Berkshire Swash', serif;
+    font-size: 400%;
 
 }
 
@@ -53,6 +53,7 @@ header {
     border-style: solid;
     background-color: rgb(185, 17, 121);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .suma-carrito {
@@ -65,21 +66,44 @@ header {
     width: 100%;
 }
 
-#ItemListConteiner{
-    text-align: center;
-    font-size: 50px;
+#ItemListConteiner {
+    margin-top: 10px;
 }
-img{
+
+img {
     width: 100px;
 }
-p{
+
+h2 {
+    color: rgb(185, 17, 121);
+    font-family: 'Berkshire Swash', serif;
+    font-size: 50px;
+}
+
+h3 {
     font-size: 20px;
 }
-.itemList{
-    display:column;
-    border-radius: 10px;
+
+h4 {
+    font-size: 15px;
 }
-.item{
-    display:column;
-    
+
+.itemList {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.item {
+    background-color: #6239533b;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Besley', serif;
+    font-size: 10px;
 }

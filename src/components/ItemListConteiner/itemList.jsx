@@ -1,8 +1,8 @@
 import Item from "./item";
-function ItemList ({item}){
-    return(
+function ItemList({ item }) {
+    return (
         <div className="itemList">
-        {item.map (item=> <Item item={item} key={item.id}/>)}
+            {item.map(item => <Item item={item} key={item.id} />)}
         </div>
     )
 }

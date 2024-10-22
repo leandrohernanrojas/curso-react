@@ -1,6 +1,6 @@
 
-function ItemCount ({}){
-    return(
+function ItemCount({ }) {
+    return (
         <div>
             <p>0</p>
             <button>-</button>

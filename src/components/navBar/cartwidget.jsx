@@ -1,7 +1,7 @@
-function CartWidget({ carrito }) {
+function CartWidget({}) {
     return (
         <div className="suma-carrito">
-            <img src={carrito} alt="logo" />0
+            <img src="../img/carrito.png" alt="logo" />0
         </div>
     )
 }

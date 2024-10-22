@@ -38,18 +38,16 @@ header {
 
 }
 
-.boton-navbar {
+.link-navbar {
     display: flex;
     flex-wrap: nowrap;
     gap: 10px;
     justify-self: center;
 }
 
-button {
-    background-color: rgb(135, 22, 33);
+.link {
     color: #2a2229;
     font-family: "Besley", serif;
-    appearance: none;
     border-radius: 10%;
     border-color: rgb(185, 17, 121);
     border-style: solid;
@@ -70,4 +68,18 @@ button {
 #ItemListConteiner{
     text-align: center;
     font-size: 50px;
+}
+img{
+    width: 100px;
+}
+p{
+    font-size: 20px;
+}
+.itemList{
+    display:column;
+    border-radius: 10px;
+}
+.item{
+    display:column;
+    
 }

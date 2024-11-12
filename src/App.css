@@ -5,10 +5,8 @@
 }
 
 body {
-    background-image: url(../img/fondo-body.jpg);
     background-image: linear-gradient(rgba(24, 23, 23, 0.472), rgba(255, 255, 255, 0.324)), url(../img/fondo-body.jpg);
     background-size: cover;
-    background-size: 100% 100%;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -87,7 +85,8 @@ h3 {
 h4 {
     font-size: 15px;
 }
-p{
+
+p {
     font-size: 15px;
 }
 
@@ -110,10 +109,19 @@ p{
     font-family: 'Besley', serif;
     font-size: 10px;
 }
-button {margin: 2px;
+
+button {
+    margin: 2px;
     background-color: rgb(135, 22, 33);
     font-family: var(--bs-body-font-family);
     color: rgb(255, 255, 255);
     border: rgb(135, 22, 33) solid;
     border-radius: 5%;
+}
+
+.loader {
+    justify-self: center;
+    align-content: center;
+    height: 50vb;
+
 }

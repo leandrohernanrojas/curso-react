@@ -1,7 +1,13 @@
+import { Link } from "react-router-dom"
+import { useCarrito } from "../../context/carritoContexto"
+
 function CartWidget({}) {
+    const {cantidadTotal} = useCarrito()
     return (
-        <div className="suma-carrito">
-            <img src="../img/carrito.png" alt="logo" />0
+        <div >
+            <Link to={"/carrito"}className="suma-carrito">
+            <img src="../img/carrito.png" />{cantidadTotal()}
+            </Link>
         </div>
     )
 }

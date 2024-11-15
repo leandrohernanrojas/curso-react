@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 function Item({ item }) {
     return (
-        <div className="item">
+        item.stock === 0 ? "": <div className="item">
             <img src={item?.img} />
             <h3>{item?.nombre}</h3>
             <h4>{item?.categoria}</h4>

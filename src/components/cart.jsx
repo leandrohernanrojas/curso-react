@@ -1,15 +1,17 @@
-import { useCarrito } from "../context/carritoContexto"
+import { useCarrito } from "../context/cartcontext"
 import { serverTimestamp } from "firebase/firestore"
 import { crearOrden } from "../firebase/db"
+import Swal from 'sweetalert2'
+import { CartItem } from "./cartitem"
+import { CheckoutForm } from "./checkoutForm"
 import { Link } from "react-router-dom"
 
 
+
+
 function Carrito() {
-    const l = () =>{
-        <Link to="/"></Link>
-    }
-    const {carrito,getTotal} = useCarrito()
-    const handelSubmit = (e) => {
+    const {carrito,getTotal,borrarCarrito} = useCarrito()
+    const handelSubmit = async (e) => {
         e.preventDefault()
         const form = e.target
         const [nombre, email, telefono] = form
@@ -20,23 +22,26 @@ function Carrito() {
             total:getTotal(),
             
         }
-        crearOrden(ordenDeCompra)
+        const idUsuario = await crearOrden(ordenDeCompra)
+        Swal.fire({
+            text: "Tu ID de compra es:" + idUsuario,
+            title: 'GRACIAS  PRO TU COMPRA',
+        })
     }
+    
     return(
-        <div >
-            {carrito.map(producto =>(
-                <div key={producto.id}>
-                    <p>{producto.nombre} x {producto.cantidad}</p>
-                </div>
-            ))}
-            <div>
+        <div>
+        <CartItem carrito={carrito}></CartItem>
+        
+        <CheckoutForm handelSubmit={handelSubmit}/>
+            {/* <div>
                 <form onSubmit={handelSubmit} >
                     <input type="text" placeholder="nombre" required/>
                     <input type="email" placeholder="E-mail" required/>
                     <input type="text" placeholder="telefono" required/>
                     <button type="submit">finalizar compra{}</button>
                 </form>
-            </div>
+            </div> */}
         </div>
     )
 }

@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import ItemList from "./itemList"
 import { useParams } from "react-router-dom"
-import Loader from "../loader"
-import { getProductos, getCategoriaProductos } from "../../firebase/db"
+import Loader from "./loader"
+import { getProductos, getCategoriaProductos } from "../firebase/db"
 
 
 

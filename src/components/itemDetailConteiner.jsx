@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import ItemDetail from "./itemDetail"
 // import { productos } from "../../data/productos"
-import { getProductoId } from "../../firebase/db"
+import { getProductoId } from "../firebase/db"
 
 
 function ItemDetailConteiner() {

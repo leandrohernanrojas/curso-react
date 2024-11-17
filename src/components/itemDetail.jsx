@@ -8,7 +8,7 @@ function ItemDetail({ detail }) {
             <h4>{detail?.descripcion}</h4>
             <p>stock:{detail?.stock}</p>
             <p>${detail?.precio}</p>
-            <ItemCount detail={detail}/>
+            <ItemCount detail={detail} />
         </div>
 
     )

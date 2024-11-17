@@ -4,13 +4,14 @@ import { crearOrden } from "../firebase/db"
 import Swal from 'sweetalert2'
 import { CartItem } from "./cartitem"
 import { CheckoutForm } from "./checkoutForm"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 
 
 
 function Carrito() {
-    const {carrito,getTotal,borrarCarrito} = useCarrito()
+    const  link =  useNavigate()
+    const {carrito,getTotal} = useCarrito()
     const handelSubmit = async (e) => {
         e.preventDefault()
         const form = e.target
@@ -26,22 +27,18 @@ function Carrito() {
         Swal.fire({
             text: "Tu ID de compra es:" + idUsuario,
             title: 'GRACIAS  PRO TU COMPRA',
-        })
+        confirmButtonText: "Save",
+        }).then((result) => {
+            if (result.isConfirmed) {
+            link("/")
+            } 
+          });
     }
     
     return(
         <div>
         <CartItem carrito={carrito}></CartItem>
-        
         <CheckoutForm handelSubmit={handelSubmit}/>
-            {/* <div>
-                <form onSubmit={handelSubmit} >
-                    <input type="text" placeholder="nombre" required/>
-                    <input type="email" placeholder="E-mail" required/>
-                    <input type="text" placeholder="telefono" required/>
-                    <button type="submit">finalizar compra{}</button>
-                </form>
-            </div> */}
         </div>
     )
 }

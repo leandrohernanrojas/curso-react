@@ -30,14 +30,18 @@ function CarritoProveedor({ children }) {
             return total
     }
 
-    // const borrarCarrito = (id) => {
-    //     const carritoActualizado = carrito.filter(articulo => articulo.id !== id)
-    //     setCarrito(carritoActualizado)
-    // }
+    const borrarProducto = (id) => {
+        const carritoActualizado = carrito.filter(articulo => articulo.id !== id)
+        return setCarrito(carritoActualizado)
+        
+    }
+    const borrar = ()=>{
+        return setCarrito([])
+    }
     
 
     return (
-        <carritoContexto.Provider value={{carrito,borrarCarrito, sumarAlCarrito,cantidadTotal,getTotal }}>
+        <carritoContexto.Provider value={{carrito,borrarProducto,borrar, sumarAlCarrito,cantidadTotal,getTotal }}>
             {children}
         </carritoContexto.Provider>
     )

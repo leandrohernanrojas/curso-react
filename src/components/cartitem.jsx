@@ -9,7 +9,7 @@ export function CartItem({ carrito }) {
             {carrito.map(producto => (
                 <div key={producto.id} className="cartitem">
                     <img src={producto.img} />
-                    <p>{producto.nombre} x {cantidadProducto}: {producto.precio * producto.cantidad}  </p>
+                    <p>{producto.nombre} x {producto.cantidad}: {producto.precio * producto.cantidad}  </p>
                     <button type="submit" onClick={() => borrarProducto(producto.id)}>eliminar producto</button>
                 </div>
             ))}

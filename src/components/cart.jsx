@@ -11,7 +11,7 @@ import { useNavigate } from "react-router-dom"
 
 function Carrito() {
     const  link =  useNavigate()
-    const {carrito,getTotal} = useCarrito()
+    const {carrito,getTotal,borrar} = useCarrito()
     const handelSubmit = async (e) => {
         e.preventDefault()
         const form = e.target
@@ -31,6 +31,7 @@ function Carrito() {
         }).then((result) => {
             if (result.isConfirmed) {
             link("/")
+            borrar()
             } 
           });
     }
